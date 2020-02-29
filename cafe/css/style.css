@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+/*すべてのWebページに適用される */
+html {
+	font-family: serif;
+	height: 100%;
+}
+html * {
+	box-sizing: border-box;
+}
+body {
+	background-color: #eeece9;
+	height: 100%;
+	width: 100%;
+}
+
+.wrapper {
+	margin: 0;
+	overflow:hidden;
+}
+h2 {
+	color: #3f5170;
+	font-size: 2.5vw;
+	border-bottom: 3px dotted #3f5170;
+	margin-top: 20px 0 20px 0;
+	padding: 5px 5px 5px 5px;
+}
+
+a:link {
+	color: #d25833;
+}
+a:visited {
+	color: #d25833;
+}
+a:hover {
+	color: #e3937a;
+}
+a:active {
+	color: #ff6a3b;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* すべてのページに適用　- ヘッダー - */
+.menu {
+	background-color: #A9A9A9;
+}
+.logo {
+	text-align: center;
+}
+.headeritem {
+	justify-content: space-around;
+	display: flex;
+}
+.headeritem li {
+	font-size: 19px;
+  	list-style: none; /*リストマーカー削除*/
+  	float: left;
+  	display: block;
+  	text-align: center;
+}
+nav a:link {
+	color: #3c454d;
+	text-decoration: none;
+}
+nav a:visited {
+	color: #3c454d;
+	text-decoration: none;
+}
+nav a:hover {
+	color: #7b8dac;
+	text-decoration: none;
+}
+nav a:active {
+	color: #5a9bc0;
+	text-decoration: none;
+}
+
+/* すべてのページに適用　- フッター　- */
+.footer {
+	box-sizing: border-box;
+	text-align: center;
+	background-color: #A9A9A9;
+	color: #3f5170;
+	margin: 20px 0 0 0;
+	padding: 30px 0 30px 0;
+}
+.footer p {
+	font-size: 1.5vw;
+}
+
+/* 個別スタイル　*/
+/* index.html */
+.mains {
+	padding-top: 15px;
+}
+.keyvisual {
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+	text-align: center;
+}
+
+/*--紹介--*/
+.mains p {
+	text-align: center;
+	font-size: 1.5vw;
+	line-height: 1.6;
+	margin: 0 auto;
+	width: 75%
+}
+#introduction {
+	padding-top: 100px;
+}
+/*--紹介終わり--*/
+/*--ニュース--*/
+#news {
+	padding-top: 100px;
+}
+.news-cat {
+	display: flex;
+  	justify-content: center;
+}
+.news-cat ul {
+	margin-right: 50px;
+}
+.news-cat li {
+	width: 100%;
+  	list-style-type: none;
+  	margin: 0 0 10px 0;
+ 	padding: 10px 30px;
+  	text-align: center;
+}
+
+.news-cat ul li {
+	font-size: 1.5vw;
+	margin: 10px auto 10px auto;
+}
+/*--ニュース終わり--*/
+/*--スケジュール--*/
+#schedule {
+	padding-top: 100px;
+}
+.calendar {
+	text-align: center;
+	height: auto;
+	margin: 0 15px;
+}
+.cal_wrapper {
+	max-width: 800px; /* 最大幅 */
+	min-width: 300px; /* 最小幅 */
+	margin: 2.0833% auto;
+}
+.calendar {
+	position: relative;
+	padding-bottom: 75%; /* 縦横比 */
+	height: 0;
+	overflow: hidden;
+	text-align: center;
+	height: auto;
+}
+.calendar iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+/*--スケジュール終わり--*/
+
+
+/* contact.html */
+#contact {
+	padding-top: 100px;
+}
+form {
+	text-align: center;
+}
+form span {
+	color: red;
+}
+form div {
+	padding: 12px;
+	border-bottom: 1px dashed #bec2c7;
+}
+input[name="title"] {
+	width: 15em;
+	border: 2px solid #A9A9A9;
+
+}
+textarea[name="content"] {
+	width: 50vw;
+	height: 20vw;
+	border: 2px solid #A9A9A9;
+}
+input[type="submit"] {
+    position: relative;
+    display: inline-block;
+}
+/*--contact.html終わり--*/
+ /* スマートフォン向けCSS */
+@media (max-width: 767px) {
+	/* 全体　- ナビゲーション */
+	.nav {
+		background: #dfddda;
+	}
+}
+@media only screen and (min-width: 300px) {
+	/* 画面幅が600px以上の場合の縦横比の指定 */
+	.calendar {
+	    padding-bottom: 75%;
+	}
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .headeritem {
+    flex-direction: column
+  }
+}
